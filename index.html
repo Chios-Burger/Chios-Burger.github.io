@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Seguridad de Información de Datos Personales FOODIX S.A.S.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            -webkit-user-select: none; /* Chrome, Safari, Opera */
+            -moz-user-select: none;    /* Firefox */
+            -ms-user-select: none;     /* Internet Explorer/Edge */
+            user-select: none;         /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center; /* Centramos los encabezados h1 y h2 */
+        }
+        .policy-section {
+            margin-bottom: 20px;
+        }
+        .date {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .signature {
+            text-align: center;
+            margin-top: 40px;
+        }
+        @media print {
+            body {
+                display: none;
+            }
+        }
+        .noscript-message {
+            text-align: center;
+            font-size: 1.2em;
+            color: red;
+        }
+    </style>
+    <noscript>
+        <style>
+            .container { display: none; }
+        </style>
+        <div class="noscript-message">
+            
+        </div>
+    </noscript>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('copy', event => event.preventDefault());
+        document.onkeydown = function (e) {
+            if (e.keyCode == 123) { // F12
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) { // Ctrl+Shift+I, Ctrl+Shift+J
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 85) { // Ctrl+U
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 83) { // Ctrl+S
+                e.preventDefault();
+                return false;
+            }
+        }
+        (function() {
+            const devtools = {
+                open: false,
+                orientation: null
+            };
+            const threshold = 160;
+            const emitEvent = (state, orientation) => {
+                window.dispatchEvent(new CustomEvent('devtoolschange', {
+                    detail: {
+                        open: state,
+                        orientation: orientation
+                    }
+                }));
+            };
+            setInterval(() => {
+                const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                const orientation = widthThreshold ? 'vertical' : 'horizontal';
+                if (!(heightThreshold && widthThreshold) &&
+                    ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)) {
+                    if (!devtools.open || devtools.orientation !== orientation) {
+                        emitEvent(true, orientation);
+                        devtools.open = true;
+                        devtools.orientation = orientation;
+                    }
+                } else {
+                    if (devtools.open) {
+                        emitEvent(false, null);
+                        devtools.open = false;
+                        devtools.orientation = null;
+                    }
+                }
+            }, 500);
+
+            window.addEventListener('devtoolschange', event => {
+                if (event.detail.open) {
+                    document.body.innerHTML = '<h1>Por favor, cierre las herramientas de desarrollo para continuar usando esta página.</h1>';
+                }
+            });
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>POLÍTICA DE SEGURIDAD DE INFORMACIÓN DE DATOS PERSONALES DE USUARIOS</h1>
+        <h1>FOODIX S.A.S.</h1>
+        <p>FOODIX S.A.S., es una organización dedicada a la actividad de producción y servicio de restaurante y comida rápida cuya, misión es crear experiencias a los clientes en nuestras tiendas. </p>
+	<p>De acuerdo a la legislación ecuatoriana, es necesario garantizar el derecho a la protección de datos personales que incluye el acceso y decisión sobre información y datos de este carácter.</p>
+        <p>Se considera un dato personal a cualquier tipo de información o datos que pueden identificar a una persona directa o indirectamente (p. ejem. nombres, correo electrónico, cédula de identidad, entre otros).</p>
+        <p>El tratamiento de datos personales es: Cualquier operación o conjunto de operaciones realizadas sobre datos personales ya sea por procedimientos técnicos de carácter automatizado, parcialmente automatizado o no automatizado tales como: la recogida, recopilación, obtención, registro, organización, estructuración, conservación, custodia, adaptación, modificación, eliminación, indexación, extracción, consulta, elaboración, utilización, posesión, aprovechamiento, distribución, cesión, comunicación o transferencia, o cualquier otra forma de habilitación de acceso, cotejo, interconexión, limitación, supresión, destrucción y en general cualquier uso de datos personales.</p>
+        <p>Intervienen en el tratamiento de datos personales el Titular, el Responsable del tratamiento, el Encargado del tratamiento, el Destinatario, la autoridad de Protección de Datos Personales y el Delegado de protección de datos personales, quienes están llamados a gestionar el sistema de protección de datos cumpliendo los principios de: juridicidad, lealtad, transparencia, finalidad, pertinencia y minimización de datos personales, proporcionalidad del tratamiento, confidencialidad, calidad y exactitud, conservación, seguridad de datos personales, responsabilidad proactiva y demostrada, aplicación favorable al titular e independencia del control.</p>
+        <p>FOODIX S.A.S., de conformidad con la Ley Orgánica de Protección de Datos Personales vigente en la República del Ecuador, mediante esta política busca que el tratamiento de datos personales de los titulares se realice con total apego a la ley y garantizando sus derechos legalmente reconocidos.</p>
+        <div class="date">
+            <p>Quito, 12 de julio de 2024</p>
+        </div>
+        <div class="signature">
+            <p>Daniel Chamorro Gonzalez<br>
+            Representante Legal<br>
+            FOODIX S.A.S.</p>
+        </div>
+    </div>
+</body>
+</html>
